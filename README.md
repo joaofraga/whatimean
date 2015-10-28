@@ -43,6 +43,17 @@ To discover the winner, just:
 ``` ruby
 word_fight = WhatIMean.is? 'google', 'altavista'
 word_fight.winner
+
+#=> #<WhatIMean::Word:0x007ffcba4960d8 @name="google", @hits=824000000, @rate=0.9987031403396075>
+```
+
+To list the searched words:
+
+``` ruby
+word_fight = WhatIMean.is? 'google', 'altavista'
+word_fight.words
+
+#=> [#<WhatIMean::Word:0x007ffcba4960d8 @name="google", @hits=824000000, @rate=0.9987031403396075>, #<WhatIMean::Word:0x007ffcba4ae750 @name="altavista", @hits=1070000, @rate=0.0012968596603924515>]
 ```
 
 ## Development
