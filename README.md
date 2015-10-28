@@ -1,5 +1,7 @@
 # Whatimean
 
+[![Code Climate](https://codeclimate.com/github/joaofraga/whatimean/badges/gpa.svg)](https://codeclimate.com/github/joaofraga/whatimean) [![Test Coverage](https://codeclimate.com/github/joaofraga/whatimean/badges/coverage.svg)](https://codeclimate.com/github/joaofraga/whatimean/coverage)
+
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/whatimean`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 TODO: Delete this and the text above, and describe your gem
@@ -22,9 +24,26 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+First add your Google Console API Key:
 
-    WhatIMean.is? 'word1', 'word2'
+``` ruby
+WhatIMean.configure do |config|
+  config.api_key = "MY_API"
+end
+```
+
+You can now discover which word is the correct using:
+
+``` ruby
+WhatIMean.is? 'word1', 'word2'
+```
+
+To discover the winner, just:
+
+``` ruby
+word_fight = WhatIMean.is? 'google', 'altavista'
+word_fight.winner
+```
 
 ## Development
 
@@ -34,7 +53,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/whatimean. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/joaofraga/whatimean. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 
 ## License
