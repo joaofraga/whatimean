@@ -17,17 +17,17 @@ describe WhatIMean, :vcr do
     end
   end
 
-  describe '.is?' do
+  describe '.is' do
     before(:each) do
       WhatIMean.configure do |config|
         config.api_key = GOOGLE_API_KEY
       end
     end
 
-    let(:whatimean) { WhatIMean.is? 'google', 'altavista' }
+    let(:whatimean) { WhatIMean.is 'google', 'altavista' }
 
     it 'initialize a Find.new' do
-      expect(WhatIMean).to respond_to(:is?)
+      expect(WhatIMean).to respond_to(:is)
     end
 
     it 'returns a instance of WhatIMean::Find' do

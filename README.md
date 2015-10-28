@@ -35,13 +35,13 @@ end
 You can now discover which word is the correct using:
 
 ``` ruby
-WhatIMean.is? 'word1', 'word2'
+WhatIMean.is 'word1', 'word2'
 ```
 
 To discover the winner, just:
 
 ``` ruby
-word_fight = WhatIMean.is? 'google', 'altavista'
+word_fight = WhatIMean.is 'google', 'altavista'
 word_fight.winner
 
 #=> #<WhatIMean::Word:0x007ffcba4960d8 @name="google", @hits=824000000, @rate=0.9987031403396075>
@@ -50,7 +50,7 @@ word_fight.winner
 To list the searched words:
 
 ``` ruby
-word_fight = WhatIMean.is? 'google', 'altavista'
+word_fight = WhatIMean.is 'google', 'altavista'
 word_fight.words
 
 #=> [#<WhatIMean::Word:0x007ffcba4960d8 @name="google", @hits=824000000, @rate=0.9987031403396075>, #<WhatIMean::Word:0x007ffcba4ae750 @name="altavista", @hits=1070000, @rate=0.0012968596603924515>]
