@@ -4,12 +4,19 @@ require 'cgi'
 
 module WhatIMean
   class Google
+    # Url to Google Custom Search API
     BASE_URL = 'https://www.googleapis.com/customsearch/v1?cref&key={key}&q={word}'
 
+    # Instantiate a new Google client object
+    # @param [String] key Google Console Custom Search API KEY
+    # @return [Google]
     def initialize(key)
       @key = key
     end
 
+    # Searchs a string with Google Custom Search
+    # @param [String] word
+    # @return [Word]
     def search(word)
       WhatIMean::Word.new(name: word, hits: fetch_word(word))
     end
