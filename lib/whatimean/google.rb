@@ -21,12 +21,8 @@ module WhatIMean
     end
 
     def fetch_word(word)
-      begin
-        open(url_to(word), "Referer" => "http://whatimean.com", "User-Agent" => "WhatIMean::Robot", ssl_verify_mode: OpenSSL::SSL::VERIFY_NONE) do |f|
-          JSON.parse(f.read)['searchInformation']['totalResults'].to_i
-        end
-      rescue OpenURI::HTTPError => e
-        e
+      open(url_to(word), "Referer" => "http://whatimean.com", "User-Agent" => "WhatIMean::Robot", ssl_verify_mode: OpenSSL::SSL::VERIFY_NONE) do |f|
+        JSON.parse(f.read)['searchInformation']['totalResults'].to_i
       end
     end
   end

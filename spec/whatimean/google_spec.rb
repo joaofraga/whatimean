@@ -20,4 +20,11 @@ describe WhatIMean::Google, :vcr do
       expect(search.rate).to be nil
     end
   end
+
+  describe 'fetch_word' do
+    it 'returns OpenURI::HTTPError when request is not valid' do
+      invalid = WhatIMean::Google.new 'INVALID_KEY'
+      expect{invalid.search('invalid')}.to raise_error(OpenURI::HTTPError)
+    end
+  end
 end
