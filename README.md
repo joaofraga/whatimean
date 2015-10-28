@@ -1,6 +1,6 @@
 # Whatimean
 
-[![Code Climate](https://codeclimate.com/github/joaofraga/whatimean/badges/gpa.svg)](https://codeclimate.com/github/joaofraga/whatimean) [![Test Coverage](https://codeclimate.com/github/joaofraga/whatimean/badges/coverage.svg)](https://codeclimate.com/github/joaofraga/whatimean/coverage)
+[![Code Climate](https://codeclimate.com/github/joaofraga/whatimean/badges/gpa.svg)](https://codeclimate.com/github/joaofraga/whatimean) [![Test Coverage](https://codeclimate.com/github/joaofraga/whatimean/badges/coverage.svg)](https://codeclimate.com/github/joaofraga/whatimean/coverage) [![Build Status](https://semaphoreci.com/api/v1/projects/83ce931d-26d9-4631-9906-c0c6aaa18f1b/584148/badge.svg)](https://semaphoreci.com/jgfraga/whatimean)
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/whatimean`. To experiment with that code, run `bin/console` for an interactive prompt.
 
