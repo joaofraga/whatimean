@@ -1,3 +1,6 @@
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
+
 # TODO: Configure VCR/Webmock
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 # require 'webmock/rspec'
